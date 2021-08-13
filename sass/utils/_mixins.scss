@@ -1,0 +1,15 @@
+@mixin mobile-screen {
+  @media all and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+@mixin tablette-screen {
+  @media all and (min-width: map-get($breakpoints, min-tablette)) and (max-width: map-get($breakpoints, max-tablette)) {
+    @content;
+  }
+}
+
+@mixin flexcenter {
+  display: flex;
+  justify-content: center;
+}

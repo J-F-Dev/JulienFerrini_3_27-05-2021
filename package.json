@@ -1,0 +1,14 @@
+{
+  "name": "p3_ferrini_julien",
+  "version": "1.0.0",
+  "description": "projet 3 oh my food",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/main.scss:./css/main.css",
+    "prefix": "postcss ./css/main.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "author": "julien",
+  "license": "ISC",
+  "browserslist": "last 4 versions"
+}

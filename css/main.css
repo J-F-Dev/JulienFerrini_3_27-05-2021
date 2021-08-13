@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+.header__logo {
+  width: 50%;
+  max-width: 400px;
+}
+
+/*# sourceMappingURL=main.css.map */
