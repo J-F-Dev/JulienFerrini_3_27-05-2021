@@ -4,3 +4,11 @@ $breakpoints: (
   max-tablette: 1024px,
   min-desktop: 1025px,
 );
+
+$colorGrey: #f6f6f6;
+$colorGreyDark: darken($colorGrey, 6%);
+
+$colorPrimaire: rgba(147, 86, 220, 1) 71%;
+$colorPrimaireLight: rgba(159, 107, 222, 1) 71%;
+$colorSecondaire: rgba(255, 121, 218, 1) 12%;
+$colorSecondaireLight: rgba(255, 140, 223, 1) 12%;

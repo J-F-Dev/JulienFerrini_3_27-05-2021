@@ -1,7 +1,11 @@
 .header {
   @include flexcenter;
+  padding: 10px;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 1);
+
+  background-color: white;
   &__logo {
     width: 50%;
-    max-width: 400px;
+    max-width: 350px;
   }
 }
