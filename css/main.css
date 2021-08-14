@@ -1,10 +1,129 @@
+@keyframes color-change-11x {
+  0% {
+    background: #ff79da;
+  }
+  10% {
+    background: #9356dc;
+  }
+  20% {
+    background: #ff8cdf;
+  }
+  30% {
+    background: #9f6bde;
+  }
+  40% {
+    background: #ff79da;
+  }
+  50% {
+    background: #9356dc;
+  }
+  60% {
+    background: #ff8cdf;
+  }
+  70% {
+    background: #9f6bde;
+  }
+  80% {
+    background: #ff79da;
+  }
+  90% {
+    background: #9356dc;
+  }
+  100% {
+    background: #ff79da;
+  }
+}
+body,
+html {
+  margin: 0;
+  font-family: "roboto", sans-serif;
+}
+
 .header {
   display: flex;
   justify-content: center;
+  padding: 10px;
+  box-shadow: 0 0 0.5rem black;
+  background-color: white;
 }
 .header__logo {
   width: 50%;
-  max-width: 400px;
+  max-width: 350px;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #e7e7e7;
+  opacity: 0.7;
+}
+.location__text {
+  background-color: #e7e7e7;
+  opacity: 1;
+  border: none;
+  width: 40%;
+  max-width: 300px;
+  font-size: min(4vw, 23px);
+  font-weight: 700;
+}
+.location__icone {
+  font-size: min(4vw, 23px);
+}
+
+.booking {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  margin-top: 0;
+}
+.booking__title {
+  width: 80%;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: min(4.5vw, 25px);
+  font-weight: 700;
+}
+.booking__title--margin {
+  margin-bottom: 0;
+}
+.booking__subtitle {
+  width: 90%;
+  max-width: 500px;
+  flex-wrap: wrap;
+  text-align: center;
+  font-weight: 400;
+  font-size: min(4vw, 23px);
+}
+.booking__subtitle--margin {
+  margin-top: 10px;
+}
+
+.bookingButton {
+  display: flex;
+  justify-content: center;
+  background-color: #f6f6f6;
+  padding-bottom: 60px;
+}
+.bookingButton__animation {
+  width: 50%;
+  max-width: 280px;
+  font-size: min(3.4vw, 19px);
+  color: white;
+  padding-top: min(3.1vw, 18px);
+  padding-bottom: min(3.1vw, 18px);
+  border-radius: 35px;
+  border: none;
+  background: linear-gradient(172deg, #ff79da 12%, #9356dc 71%);
+  cursor: pointer;
+}
+.bookingButton__animation:hover {
+  background: linear-gradient(172deg, #ff8cdf 12%, #9f6bde 71%);
+  animation: color-change-11x 2s ease-in-out infinite;
+  transform: scale(1.1);
+  transition: 1s;
+  box-shadow: -6px -4px 32px 0px #ffaee9, 6px 4px 32px 0px #bb97e8;
 }
 
 /*# sourceMappingURL=main.css.map */
