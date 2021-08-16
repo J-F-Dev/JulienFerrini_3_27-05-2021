@@ -51,6 +51,7 @@ html {
   max-width: 350px;
 }
 
+/*Start Section 1*/
 .location {
   display: flex;
   justify-content: center;
@@ -104,9 +105,11 @@ html {
   display: flex;
   justify-content: center;
   background-color: #f6f6f6;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
+  padding-top: 10px;
 }
 .bookingButton__animation {
+  box-shadow: 2px 13px 28px -6px #777777;
   width: 50%;
   max-width: 280px;
   font-size: min(3.4vw, 19px);
@@ -125,5 +128,93 @@ html {
   transition: 1s;
   box-shadow: -6px -4px 32px 0px #ffaee9, 6px 4px 32px 0px #bb97e8;
 }
+.bookingButton__animation:active {
+  transform: scale(0.9);
+  transition: 0.1s;
+  box-shadow: 2px 13px 28px -6px #777777;
+}
+
+/*End Section 1*/
+/*Start Section 2*/
+.function {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 20px;
+}
+.function__title {
+  font-size: min(4.5vw, 25px);
+  font-weight: 700;
+}
+@media all and (min-width: 734px) {
+  .function__title {
+    text-align: center;
+  }
+}
+.function__box {
+  display: flex;
+  justify-content: center;
+  margin-left: 3%;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media all and (min-width: 734px) {
+  .function__box {
+    margin-left: auto;
+  }
+}
+.function__buttons {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #f6f6f6;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 20px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 300px;
+  min-height: 20px;
+  height: auto;
+  box-shadow: 4px 5px 8px 4px #e7e7e7;
+}
+@media all and (min-width: 734px) {
+  .function__buttons {
+    margin-right: 1.5vw;
+    margin-left: 1.5vw;
+  }
+}
+.function__buttons:hover {
+  background-color: #f7f2fc;
+  transform: scale(1.01) translate(-10px, -4px);
+}
+.function__buttons:hover .function__buttons--icone {
+  color: #9356dc;
+}
+.function__buttons:active {
+  box-shadow: 4px 1px 11px 4px #e7e7e7 inset;
+  transform: translate(0px, 0px);
+}
+.function__buttons--number {
+  position: relative;
+  background-color: #9356dc;
+  border-radius: 50%;
+  padding: 4px 8px 4px 8px;
+  color: white;
+  margin-left: -32px;
+}
+.function__buttons--icone {
+  color: #777777;
+  margin-right: 15px;
+  margin-left: min(15px);
+  font-size: min(4vw, 23px);
+}
+.function__buttons--title {
+  font-size: min(4vw, 23px);
+  font-weight: 700;
+}
+
+/*End Section 2*/
 
 /*# sourceMappingURL=main.css.map */

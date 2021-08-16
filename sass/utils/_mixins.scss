@@ -8,6 +8,11 @@
     @content;
   }
 }
+@mixin tabletteAndDesktop-screen {
+  @media all and (min-width: map-get($breakpoints, min-tablette)) {
+    @content;
+  }
+}
 
 @mixin flexcenter {
   display: flex;
