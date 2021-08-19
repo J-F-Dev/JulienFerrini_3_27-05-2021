@@ -1,6 +1,6 @@
 $breakpoints: (
-  mobile: 733px,
-  min-tablette: 734px,
+  mobile: 719px,
+  min-tablette: 720px,
   max-tablette: 1024px,
   min-desktop: 1025px,
 );
@@ -8,12 +8,20 @@ $breakpoints: (
 $colorGrey: #f6f6f6;
 $colorGreyDark: darken($colorGrey, 6%);
 $colorGreyIcone: darken($colorGrey, 50%);
+$colorGreyShadow: darken($colorGrey, 30%);
 
 $colorPrimaire: #9356dc;
-$colorSecondaire: #ff79da;
 $colorPrimaireLight: lighten($colorPrimaire, 37%);
+
+$colorSecondaire: #ff79da;
+
+$colorTertiaire: #99e2d0;
+$colorTertiaireDark: darken($colorTertiaire, 40%);
 
 $colorPrimaireGradient: rgba(147, 86, 220, 1) 71%;
 $colorPrimaireGradientLight: rgba(159, 107, 222, 1) 71%;
+$colorPrimaireGradientLightReverse: rgba(159, 107, 222, 1) 12%;
+
 $colorSecondaireGradient: rgba(255, 121, 218, 1) 12%;
 $colorSecondaireGradientLight: rgba(255, 140, 223, 1) 12%;
+$colorSecondaireGradientLightReverse: rgba(255, 140, 223, 1) 71%;

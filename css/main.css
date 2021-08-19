@@ -1,42 +1,20 @@
-@keyframes color-change-11x {
-  0% {
-    background: #ff79da;
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
   }
-  10% {
-    background: #9356dc;
-  }
-  20% {
-    background: #ff8cdf;
-  }
-  30% {
-    background: #9f6bde;
-  }
-  40% {
-    background: #ff79da;
-  }
-  50% {
-    background: #9356dc;
-  }
-  60% {
-    background: #ff8cdf;
-  }
-  70% {
-    background: #9f6bde;
-  }
-  80% {
-    background: #ff79da;
-  }
-  90% {
-    background: #9356dc;
-  }
-  100% {
-    background: #ff79da;
+  25%, 75% {
+    opacity: 0;
   }
 }
 body,
 html {
   margin: 0;
   font-family: "roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  display: contents;
 }
 
 .header {
@@ -51,6 +29,24 @@ html {
   max-width: 350px;
 }
 
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  background-color: #f6f6f6;
+}
+.restaurants__title {
+  font-size: min(4.5vw, 25px);
+  font-weight: 700;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+@media all and (min-width: 720px) {
+  .restaurants__title {
+    text-align: center;
+  }
+}
+
 /*Start Section 1*/
 .location {
   display: flex;
@@ -63,8 +59,9 @@ html {
   background-color: #e7e7e7;
   opacity: 1;
   border: none;
-  width: 40%;
-  max-width: 300px;
+  width: 35vw;
+  max-width: 200px;
+  text-align: center;
   font-size: min(4vw, 23px);
   font-weight: 700;
 }
@@ -122,8 +119,7 @@ html {
   cursor: pointer;
 }
 .bookingButton__animation:hover {
-  background: linear-gradient(172deg, #ff8cdf 12%, #9f6bde 71%);
-  animation: color-change-11x 2s ease-in-out infinite;
+  background: linear-gradient(172deg, #9f6bde 12%, #ff8cdf 71%);
   transform: scale(1.1);
   transition: 1s;
   box-shadow: -6px -4px 32px 0px #ffaee9, 6px 4px 32px 0px #bb97e8;
@@ -131,7 +127,7 @@ html {
 .bookingButton__animation:active {
   transform: scale(0.9);
   transition: 0.1s;
-  box-shadow: 2px 13px 28px -6px #777777;
+  box-shadow: -6px -4px 32px 0px #ffaee9, 6px 4px 32px 0px #bb97e8 inset;
 }
 
 /*End Section 1*/
@@ -147,7 +143,7 @@ html {
   font-size: min(4.5vw, 25px);
   font-weight: 700;
 }
-@media all and (min-width: 734px) {
+@media all and (min-width: 720px) {
   .function__title {
     text-align: center;
   }
@@ -159,7 +155,7 @@ html {
   flex-wrap: wrap;
   width: 100%;
 }
-@media all and (min-width: 734px) {
+@media all and (min-width: 720px) {
   .function__box {
     margin-left: auto;
   }
@@ -179,7 +175,7 @@ html {
   height: auto;
   box-shadow: 4px 5px 8px 4px #e7e7e7;
 }
-@media all and (min-width: 734px) {
+@media all and (min-width: 720px) {
   .function__buttons {
     margin-right: 1.5vw;
     margin-left: 1.5vw;
@@ -188,13 +184,16 @@ html {
 .function__buttons:hover {
   background-color: #f7f2fc;
   transform: scale(1.01) translate(-10px, -4px);
+  box-shadow: 4px 5px 8px 4px #aaaaaa;
 }
 .function__buttons:hover .function__buttons--icone {
   color: #9356dc;
 }
 .function__buttons:active {
-  box-shadow: 4px 1px 11px 4px #e7e7e7 inset;
+  box-shadow: 4px 1px 11px 4px #aaaaaa inset;
   transform: translate(0px, 0px);
+  background-color: #f6f6f6;
+  user-select: none;
 }
 .function__buttons--number {
   position: relative;
@@ -216,5 +215,129 @@ html {
 }
 
 /*End Section 2*/
+/*Start Section 3*/
+.restaurants__cardsBox {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+.restaurants__cardsBox__cards {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+@media all and (min-width: 720px) {
+  .restaurants__cardsBox__cards {
+    margin-right: 1.5vw;
+    margin-left: 1.5vw;
+  }
+}
+.restaurants__cardsBox__cards:hover {
+  transform: scale(1.01) translate(-10px, -4px);
+  box-shadow: 4px 5px 8px 4px #aaaaaa;
+}
+.restaurants__cardsBox__cards:active:active {
+  box-shadow: 4px 1px 11px 4px #aaaaaa inset;
+  transform: translate(0px, 0px);
+}
+.restaurants__cardsBox__cards__txtBox {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+.restaurants__cardsBox__cards__txtBox--txt {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  padding-left: 12px;
+}
+.restaurants__cardsBox__cards__txtBox--txt h3 {
+  font-size: min(5vw, 23px);
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.restaurants__cardsBox__cards__txtBox--txt p {
+  font-size: min(4.5vw, 20px);
+  font-weight: 400;
+  margin-top: 3px;
+  margin-bottom: 0px;
+}
+.restaurants__cardsBox__cards__txtBox--icone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 5vw;
+  max-width: 23px;
+}
+.restaurants__cardsBox__cards__txtBox--icone .heart-full {
+  position: absolute;
+  fill: url(#text-fill);
+  stroke: none;
+}
+.restaurants__cardsBox__cards__txtBox--icone .heart {
+  width: 5vw;
+  max-width: 23px;
+  stroke-width: 30;
+  cursor: pointer;
+}
+.restaurants__cardsBox__cards__txtBox--icone .heart-empty {
+  width: 50px;
+  position: relative;
+  fill: white;
+  stroke: black;
+}
+.restaurants__cardsBox__cards__txtBox--icone .heart-empty:hover {
+  opacity: 0;
+  transition: 1s;
+}
+.restaurants__cardsBox__cards__img {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  height: 180px;
+  border-radius: 20px 20px 0px 0px;
+}
+.restaurants__cardsBox__cards__img--position1 {
+  object-position: bottom;
+}
+.restaurants__cardsBox__cards__img--position2 {
+  object-position: 20% 61%;
+}
+.restaurants__cardsBox__cards__img--position3 {
+  object-position: 50% 100%;
+}
+.restaurants__cardsBox__cards__img--position4 {
+  object-position: 50% 100%;
+}
+.restaurants__cardsBox__cards__img--size {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.newBefore::before {
+  content: "Nouveau";
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 265px;
+  margin-left: min(68vw, 265px);
+  background-color: #99e2d0;
+  color: #278870;
+  padding: 5px;
+  border-radius: 3px;
+  animation: flash 3s cubic-bezier(0.69, 1.1, 0.34, 1.01) infinite both;
+}
+
+/*End Section 3*/
 
 /*# sourceMappingURL=main.css.map */
