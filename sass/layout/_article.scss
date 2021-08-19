@@ -1,0 +1,17 @@
+.restaurants {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 20px;
+  background-color: $colorGrey;
+
+  &__title {
+    font-size: min(4.5vw, 25px);
+    font-weight: 700;
+    margin-left: 5%;
+    margin-right: 5%;
+    @include tabletteAndDesktop-screen {
+      text-align: center;
+    }
+  }
+}
