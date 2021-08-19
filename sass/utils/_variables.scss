@@ -3,12 +3,14 @@ $breakpoints: (
   min-tablette: 720px,
   max-tablette: 1024px,
   min-desktop: 1025px,
+  large-desktop: 1615px,
 );
 
 $colorGrey: #f6f6f6;
 $colorGreyDark: darken($colorGrey, 6%);
 $colorGreyIcone: darken($colorGrey, 50%);
 $colorGreyShadow: darken($colorGrey, 30%);
+$colorGreyFooter: darken($colorGrey, 80%);
 
 $colorPrimaire: #9356dc;
 $colorPrimaireLight: lighten($colorPrimaire, 37%);

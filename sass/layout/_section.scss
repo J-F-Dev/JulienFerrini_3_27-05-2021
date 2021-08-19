@@ -173,6 +173,7 @@
   @include flexcenter;
   flex-wrap: wrap;
   margin: 10px;
+
   &__cards {
     display: flex;
     flex-direction: column;

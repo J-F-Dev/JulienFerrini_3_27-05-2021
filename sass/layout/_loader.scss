@@ -1,0 +1,51 @@
+.loader {
+  position: absolute;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background: black;
+  visibility: hidden;
+  animation: loader 3s;
+
+  &__letter {
+    font-family: "Shrikhand", sans-serif;
+    font-size: min(15vw, 100px);
+    animation: loaderFlash 1.6s ease alternate infinite both;
+    &:nth-child(1) {
+      color: #ffafe9;
+      animation-delay: 0.1s;
+    }
+    &:nth-child(2) {
+      color: #ff9be4;
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3) {
+      color: #ff8bdf;
+      animation-delay: 0.3s;
+    }
+    &:nth-child(4) {
+      color: #ff79da;
+      animation-delay: 0.4s;
+    }
+    &:nth-child(5) {
+      color: #dc56c8;
+      animation-delay: 0.5s;
+    }
+    &:nth-child(6) {
+      color: #cc56dc;
+      animation-delay: 0.6s;
+    }
+    &:nth-child(7) {
+      color: #a956dc;
+      animation-delay: 0.7s;
+    }
+    &:nth-child(8) {
+      color: #9356dc;
+      animation-delay: 0.8s;
+    }
+  }
+}

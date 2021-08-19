@@ -13,6 +13,11 @@
     @content;
   }
 }
+@mixin Large-screen {
+  @media all and (min-width: map-get($breakpoints, large-desktop)) {
+    @content;
+  }
+}
 
 @mixin flexcenter {
   display: flex;
