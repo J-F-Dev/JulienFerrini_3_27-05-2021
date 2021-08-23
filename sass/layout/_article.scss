@@ -16,3 +16,60 @@
     }
   }
 }
+
+.checkbox {
+  @include flexcenter;
+
+  flex-direction: column;
+  margin-top: -40px;
+  padding-top: 10px;
+  background-color: $colorGrey;
+  border-radius: 40px 40px 0px 0px;
+  max-width: 950px;
+  &:hover {
+    @include tabletteAndDesktop-screen {
+      transform: scale(1.01) translate(-10px, -4px);
+      box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
+      border-radius: 40px 40px 40px 40px;
+    }
+  }
+  &__header {
+    @include flexcenter;
+    &__title {
+      font-family: "Shrikhand", sans-serif;
+      margin-right: 32px;
+      font-size: min(4.5vw, 30px);
+    }
+    &__heart {
+      @include flexcenter;
+      align-items: center;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 6vw;
+      max-width: 30px;
+      & .heart-full {
+        position: absolute;
+        fill: url(#text-fill);
+        stroke: none;
+      }
+      .heart {
+        width: 6vw;
+        max-width: 30px;
+        stroke-width: 30;
+        cursor: pointer;
+      }
+      .heart-empty {
+        width: 50px;
+        position: relative;
+        fill: $colorGrey;
+        stroke: black;
+        &:hover {
+          opacity: 0;
+          transition: 1s;
+        }
+      }
+    }
+  }
+}
