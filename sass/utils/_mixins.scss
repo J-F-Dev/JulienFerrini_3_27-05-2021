@@ -23,6 +23,11 @@
     @content;
   }
 }
+@mixin mobile-check-max($mobilecheck) {
+  @media all and (max-width: $mobilecheck) {
+    @content;
+  }
+}
 
 @mixin flexcenter {
   display: flex;
