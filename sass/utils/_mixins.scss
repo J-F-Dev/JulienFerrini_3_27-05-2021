@@ -18,6 +18,11 @@
     @content;
   }
 }
+@mixin mobile-check($mobilecheck) {
+  @media all and (min-width: $mobilecheck) {
+    @content;
+  }
+}
 
 @mixin flexcenter {
   display: flex;
