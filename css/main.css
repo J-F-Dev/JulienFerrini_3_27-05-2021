@@ -91,6 +91,16 @@
     opacity: 1;
   }
 }
+@keyframes opacityCards {
+  0% {
+    filter: blur(30px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
 body,
 html {
   margin: 0;
@@ -193,14 +203,70 @@ a {
   width: 50%;
   max-width: 350px;
 }
-.header__previous {
-  position: absolute;
-  top: min(4vw, 25px);
-  left: min(5vw, 40px);
+
+.footer {
+  background-color: #2a2a2a;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
-.header__previous--icone {
-  font-size: min(4vw, 30px);
-  color: black;
+@media all and (min-width: 1615px) {
+  .footer {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+}
+.footer__logo {
+  display: flex;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media all and (min-width: 457px) {
+  .footer__logo {
+    justify-content: center;
+    align-items: center;
+  }
+}
+.footer__logo--colorSize {
+  filter: invert(100%);
+  width: 28vw;
+  max-width: 350px;
+}
+.footer__boxLink {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media all and (min-width: 457px) {
+  .footer__boxLink {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media all and (min-width: 768px) {
+  .footer__boxLink {
+    flex-direction: row;
+  }
+}
+.footer__boxLink__position {
+  padding-bottom: 5px;
+}
+@media all and (min-width: 768px) {
+  .footer__boxLink__position {
+    margin-right: 20px;
+  }
+}
+.footer__boxLink__position--icone {
+  color: white;
+  font-size: min(4.5vw, 20px);
+  margin-right: 5px;
+}
+.footer__boxLink__position--link {
+  color: white;
+  font-size: min(4.5vw, 20px);
+  font-weight: 500;
 }
 
 .restaurants {
@@ -220,65 +286,6 @@ a {
   .restaurants__title {
     text-align: center;
   }
-}
-
-.checkbox {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: -100px;
-  padding-top: 10px;
-  background-color: #f6f6f6;
-  border-radius: 40px 40px 0px 0px;
-  max-width: 950px;
-}
-@media all and (min-width: 720px) {
-  .checkbox:hover {
-    transform: scale(1.01) translate(-10px, -4px);
-    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 40px 40px 40px 40px;
-  }
-}
-.checkbox__header {
-  display: flex;
-  justify-content: center;
-}
-.checkbox__header__title {
-  font-family: "Shrikhand", sans-serif;
-  margin-right: 32px;
-  font-size: min(4.5vw, 30px);
-}
-.checkbox__header__heart {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 6vw;
-  max-width: 30px;
-}
-.checkbox__header__heart .heart-full {
-  position: absolute;
-  fill: url(#text-fill);
-  stroke: none;
-}
-.checkbox__header__heart .heart {
-  width: 6vw;
-  max-width: 30px;
-  stroke-width: 30;
-  cursor: pointer;
-}
-.checkbox__header__heart .heart-empty {
-  width: 50px;
-  position: relative;
-  fill: #f6f6f6;
-  stroke: black;
-}
-.checkbox__header__heart .heart-empty:hover {
-  opacity: 0;
-  transition: 1s;
 }
 
 /*Start Section 1*/
@@ -464,6 +471,7 @@ a {
   max-width: 350px;
   border-radius: 20px;
   margin-bottom: 20px;
+  animation: opacityCards 3s cubic-bezier(0.23, 1, 0.32, 1) 2s both;
 }
 @media all and (min-width: 720px) {
   .restaurants__cardsBox__cards {
@@ -573,7 +581,75 @@ a {
 }
 
 /*End Section 3*/
-/*START LA PALETTE DU GOUT*/
+.checkbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -100px;
+  padding-top: 10px;
+  background-color: #f6f6f6;
+  border-radius: 40px 40px 0px 0px;
+  max-width: 950px;
+}
+@media all and (min-width: 720px) {
+  .checkbox:hover {
+    transform: scale(1.01) translate(-10px, -4px);
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 40px 40px 40px 40px;
+  }
+}
+.checkbox__header {
+  display: flex;
+  justify-content: center;
+}
+.checkbox__header__title {
+  font-family: "Shrikhand", sans-serif;
+  margin-right: 32px;
+  font-size: min(4.5vw, 30px);
+}
+.checkbox__header__heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 6vw;
+  max-width: 30px;
+}
+.checkbox__header__heart .heart-full {
+  position: absolute;
+  fill: url(#text-fill);
+  stroke: none;
+}
+.checkbox__header__heart .heart {
+  width: 6vw;
+  max-width: 30px;
+  stroke-width: 30;
+  cursor: pointer;
+}
+.checkbox__header__heart .heart-empty {
+  width: 50px;
+  position: relative;
+  fill: #f6f6f6;
+  stroke: black;
+}
+.checkbox__header__heart .heart-empty:hover {
+  opacity: 0;
+  transition: 1s;
+}
+
+.header__previous {
+  position: absolute;
+  top: min(4vw, 25px);
+  left: min(5vw, 40px);
+}
+.header__previous--icone {
+  font-size: min(4vw, 30px);
+  color: black;
+}
+
 .checkbox__section {
   display: flex;
   justify-content: center;
@@ -865,72 +941,6 @@ a {
   transform: scale(0.9);
   transition: 0.1s;
   box-shadow: -6px -4px 32px 0px #ffaee9, 6px 4px 32px 0px #bb97e8 inset;
-}
-
-/*END LA PALETTE DU GOUT*/
-.footer {
-  background-color: #2a2a2a;
-  padding-bottom: 40px;
-  padding-top: 40px;
-}
-@media all and (min-width: 1615px) {
-  .footer {
-    padding-bottom: 80px;
-    padding-top: 80px;
-  }
-}
-.footer__logo {
-  display: flex;
-  padding-bottom: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-@media all and (min-width: 457px) {
-  .footer__logo {
-    justify-content: center;
-    align-items: center;
-  }
-}
-.footer__logo--colorSize {
-  filter: invert(100%);
-  width: 28vw;
-  max-width: 350px;
-}
-.footer__boxLink {
-  display: flex;
-  flex-direction: column;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-@media all and (min-width: 457px) {
-  .footer__boxLink {
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media all and (min-width: 768px) {
-  .footer__boxLink {
-    flex-direction: row;
-  }
-}
-.footer__boxLink__position {
-  padding-bottom: 5px;
-}
-@media all and (min-width: 768px) {
-  .footer__boxLink__position {
-    margin-right: 20px;
-  }
-}
-.footer__boxLink__position--icone {
-  color: white;
-  font-size: min(4.5vw, 20px);
-  margin-right: 5px;
-}
-.footer__boxLink__position--link {
-  color: white;
-  font-size: min(4.5vw, 20px);
-  font-weight: 500;
 }
 
 /*# sourceMappingURL=main.css.map */

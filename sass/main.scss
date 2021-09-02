@@ -6,6 +6,12 @@
 
 @import "./layout/loader";
 @import "./layout/header";
-@import "./layout/article";
-@import "./layout/section";
 @import "./layout/footer";
+
+@import "./pages/accueilArticle1Cards";
+@import "./pages/accueilSection1Location";
+@import "./pages/accueilSection2Function";
+@import "./pages/accueilSection3Cards";
+@import "./pages/restaurantArticle1Checkbox";
+@import "./pages/restaurantHeaderPrevious";
+@import "./pages/restaurantSection1Checkbox";
