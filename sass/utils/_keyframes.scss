@@ -104,3 +104,13 @@
     opacity: 1;
   }
 }
+@keyframes opacityCards {
+  0% {
+    filter: blur(30px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,11 @@
+.header {
+  &__previous {
+    position: absolute;
+    top: min(4vw, 25px);
+    left: min(5vw, 40px);
+    &--icone {
+      font-size: min(4vw, 30px);
+      color: black;
+    }
+  }
+}
